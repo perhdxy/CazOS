@@ -1,0 +1,39 @@
+{
+  "name": "ProMarket Base v1",
+  "description": "Clean, professional Discord layout for AI-driven market news & community",
+  "channels": [
+    { "type": "GUILD_CATEGORY", "name": "0｜INFO", "position": 0 },
+    { "type": "GUILD_TEXT", "name": "rules", "parent": "0｜INFO" },
+    { "type": "GUILD_TEXT", "name": "announcements", "parent": "0｜INFO", "topic": "Admin-only updates" },
+    { "type": "GUILD_TEXT", "name": "roadmap", "parent": "0｜INFO" },
+
+    { "type": "GUILD_CATEGORY", "name": "1｜ONBOARDING", "position": 1 },
+    { "type": "GUILD_TEXT", "name": "welcome", "parent": "1｜ONBOARDING" },
+    { "type": "GUILD_TEXT", "name": "faq", "parent": "1｜ONBOARDING" },
+
+    { "type": "GUILD_CATEGORY", "name": "2｜MARKET-INSIGHTS", "position": 2 },
+    { "type": "GUILD_TEXT", "name": "news-feed", "parent": "2｜MARKET-INSIGHTS" },
+    { "type": "GUILD_TEXT", "name": "watchlist", "parent": "2｜MARKET-INSIGHTS" },
+    { "type": "GUILD_TEXT", "name": "macro-dashboard", "parent": "2｜MARKET-INSIGHTS" },
+
+    { "type": "GUILD_CATEGORY", "name": "3｜COMMUNITY", "position": 3 },
+    { "type": "GUILD_TEXT", "name": "general", "parent": "3｜COMMUNITY" },
+    { "type": "GUILD_TEXT", "name": "resources", "parent": "3｜COMMUNITY" },
+    { "type": "GUILD_VOICE", "name": "voice-lounge", "parent": "3｜COMMUNITY" },
+
+    { "type": "GUILD_CATEGORY", "name": "4｜SUPPORT", "position": 4 },
+    { "type": "GUILD_TEXT", "name": "open-ticket", "parent": "4｜SUPPORT" },
+    { "type": "GUILD_TEXT", "name": "bug-report", "parent": "4｜SUPPORT" },
+
+    { "type": "GUILD_CATEGORY", "name": "5｜STAFF", "position": 5, "permission_overwrites": [ { "id": "@everyone", "deny": ["VIEW_CHANNEL"] } ] },
+    { "type": "GUILD_TEXT", "name": "logs", "parent": "5｜STAFF" },
+    { "type": "GUILD_TEXT", "name": "mod-notes", "parent": "5｜STAFF" }
+  ],
+  "roles": [
+    { "name": "Admin", "permissions": "ADMINISTRATOR", "color": 16312092, "hoist": true },
+    { "name": "Mod", "permissions": ["KICK_MEMBERS","BAN_MEMBERS","MANAGE_MESSAGES"], "color": 3447003 },
+    { "name": "Analyst", "permissions": ["SEND_MESSAGES","EMBED_LINKS","ATTACH_FILES"], "color": 10197915 },
+    { "name": "Member", "permissions": ["SEND_MESSAGES","VIEW_CHANNEL"], "color": 7506394 },
+    { "name": "Muted", "permissions": ["VIEW_CHANNEL"], "color": 10070709 }
+  ]
+}
